@@ -43,6 +43,7 @@ body{
 .display{
     width: auto;
     background-color: white;
+    height: 55px;
     margin: 5px;
     font-size: 30px;
     padding: 10px;

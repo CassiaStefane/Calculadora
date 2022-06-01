@@ -17,7 +17,7 @@ const calcular = () => {
         }else if (operador == '-'){
             atualizar (numeroAnterior - numeroAtual);
         }
-        else if (operador == 'x'){
+        else if (operador == '*'){
             atualizar (numeroAnterior * numeroAtual);
         }
         else if (operador == '/'){
@@ -53,3 +53,17 @@ const calcularIgual = () => {
     operador = undefined;
 }
 document.getElementById('equal').addEventListener('click', calcularIgual);
+
+const limparDisplay = () => display.textContent ='';
+document.getElementById('ce').addEventListener('click', limparDisplay);
+
+const limparCalculo = () => {
+    limparDisplay();
+    operador = undefined;
+    novoNumero = true;
+    numeroAnterior = undefined;
+}
+document.getElementById('c').addEventListener('click', limparCalculo);
+
+const removeLast = () => display.textContent = display.textContent.slice(0, -1);
+document.getElementById('backspace').addEventListener('click', removeLast);
